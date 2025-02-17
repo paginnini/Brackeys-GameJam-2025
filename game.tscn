@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dytc2fh8j8cf"]
+
+[ext_resource type="PackedScene" uid="uid://dqrfb1upyiqv4" path="res://player.tscn" id="1_cmw47"]
+[ext_resource type="PackedScene" uid="uid://csja2p2akv3vw" path="res://item.tscn" id="2_356ul"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e6s6r"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0oaeu"]
+normal = Vector2(-1, 0)
+distance = -5.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8jso3"]
+normal = Vector2(0.999993, 0.00367645)
+distance = -56.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-6, 115)
+scale = Vector2(0.999142, 0.637015)
+polygon = PackedVector2Array(22, 172, 23, 502, 1142, 503, 1137, 168)
+
+[node name="Player" parent="." instance=ExtResource("1_cmw47")]
+position = Vector2(465, 316)
+
+[node name="Item" parent="." instance=ExtResource("2_356ul")]
+position = Vector2(617, 329)
+
+[node name="Borders" type="StaticBody2D" parent="."]
+position = Vector2(436, 439)
+
+[node name="Bottom" type="CollisionShape2D" parent="Borders"]
+position = Vector2(101, 0)
+shape = SubResource("WorldBoundaryShape2D_e6s6r")
+
+[node name="Right" type="CollisionShape2D" parent="Borders"]
+position = Vector2(698, -103)
+shape = SubResource("WorldBoundaryShape2D_0oaeu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-365, -117)
+shape = SubResource("WorldBoundaryShape2D_8jso3")
