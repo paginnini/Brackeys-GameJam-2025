@@ -22,9 +22,6 @@ position = Vector2(-6, 115)
 scale = Vector2(0.999142, 0.637015)
 polygon = PackedVector2Array(20, 170, 20, 500, 1140, 500, 1140, 170)
 
-[node name="Machine" parent="." instance=ExtResource("3_iiurt")]
-position = Vector2(466, 225)
-
 [node name="Player" parent="." instance=ExtResource("1_cmw47")]
 position = Vector2(465, 316)
 
@@ -52,3 +49,6 @@ shape = SubResource("WorldBoundaryShape2D_0oaeu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
 position = Vector2(-365, -117)
 shape = SubResource("WorldBoundaryShape2D_8jso3")
+
+[node name="Machine" parent="." instance=ExtResource("3_iiurt")]
+position = Vector2(466, 225)

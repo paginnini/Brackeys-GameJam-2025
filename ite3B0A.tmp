@@ -10,7 +10,9 @@ script = ExtResource("1_vgomr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_l7l74")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.443137, 0.411765, 0.658824, 1)
+polygon = PackedVector2Array(-8, 0, 3, 8, 6, -7)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

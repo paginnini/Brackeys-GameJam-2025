@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmw8dvsygtus2"]
+
+[ext_resource type="Texture2D" uid="uid://7h5e5nfm2ggs" path="res://sprites/machine1.png" id="1_8h8pr"]
+[ext_resource type="Texture2D" uid="uid://bv6ku5ycait1l" path="res://sprites/machine2.png" id="2_cslpp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qelni"]
+radius = 17.0294
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjjjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8h8pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cslpp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Machine" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qelni")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gjjjv")
+autoplay = "default"
+frame_progress = 0.725215

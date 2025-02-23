@@ -1,0 +1,19 @@
+nothing can go wrong...
+nothing = lack of something
+lack of something = empty
+if empty it can go wrong
+
+locomotive with various machines that keep it going
+enemies spawn to the sides of the locomotive and attack
+kill then to get money and pieces for the machines
+the pieces wear off with time
+if a machine dont have pieces for a time the locomotives explodes
+
+kill the bandits with guns
+
+machines: engine, coal deposite, 
+
+enemies: bandits in horses shooting ( revolver, shotgun, gatling gun),
+
+pieces: pipes, cogs, guns, bags of money, coal, lasso
+can only carry one piece at a time
